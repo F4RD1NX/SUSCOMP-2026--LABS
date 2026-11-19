@@ -4,7 +4,7 @@ Course: Sustainable Computing
 Operating system: Windows
 CPU: Intel Core i5-10300H
 GPU: NVIDIA GeForce GTX 1650 Ti
-Python environment: suscomp-25
+Python environment: suscomp-26
 1. Introduction
 The aim of this lab was to measure the energy used by different software workloads. I compared pure Python with NumPy, and PyTorch running on the CPU and GPU. I also compared three energy meters to understand how their measurement scopes affect the results.
 2. Method
