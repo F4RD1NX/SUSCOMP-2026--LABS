@@ -1,4 +1,4 @@
-Week 5 Lab Notes --- Measuring Software Energy Consumption
+**Week 5 Lab Notes --- Measuring Software Energy Consumption
 Student: Md shafiul karim
 Course: Sustainable Computing
 Lab: Week 5 --- Measuring Software Energy Consumption
@@ -7,6 +7,7 @@ Processor: Intel Core i5-10300H (Intel64 Family 6 Model 165 Stepping
 2)
 GPU: NVIDIA GeForce GTX 1650 Ti
 Python environment: suscomp-25
+
 1. Introduction
 The purpose of this lab was to measure and compare the energy
 consumption of different software implementations while they performed
@@ -333,27 +334,7 @@ NumPy (Battery)                       24.35                  20.10         appro
 The battery NumPy energy-per-GFLOP summary is affected by the anomalous
 sixth run. It should therefore be interpreted with caution.
 8. Reflection
-The most noticeable result was the difference between pure Python and
-optimized numerical libraries. NumPy completed vastly more
-matrix-multiplication work in the same approximate 30-second period.
-This shows the benefit of using optimized libraries for computational
-tasks instead of implementing every operation in ordinary Python loops.
 
-The PyTorch GPU test had the highest throughput. It achieved
-approximately 2,551.84 GFLOP/s, compared with 174.98 GFLOP/s on the CPU.
-This demonstrates the advantage of GPU acceleration for a workload that
-can use parallel computation effectively. The GPU's measured board power
-was higher, but its reported energy per GFLOP was lower. Since the CPU
-and GPU meters have different scopes, this result is an indication
-rather than a perfectly controlled whole-system energy comparison.
-
-The different meters did not produce directly comparable power readings.
-CodeCarbon measured CPU energy, NVIDIA measured GPU-board energy, and
-the battery meter measured the whole laptop. The battery results were
-also less stable for the NumPy workload because one run was much lower
-than the other five. This showed me that measurement tools and their
-limitations matter when drawing conclusions about software energy
-consumption.
 
 Overall, the experiment showed that performance and energy efficiency
 should be considered together. The fastest implementation is not
